@@ -1,0 +1,18 @@
+.item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.item-icon {
+  width: 54px;
+  height: 74px;
+  margin: 28px 0;
+}
+.item-content {
+  color: #c28c57;
+  font-size: 16px;
+  text-align: center;
+}
+@import '@shadow/pages/kyc/under-review/style.module.scss';

@@ -1,0 +1,204 @@
+.wrapper {
+  width: 354px;
+  height: 188px;
+  background: #f3d491;
+  box-shadow:
+    0px 2px 4px #ffebbd,
+    inset 0px 2px 4px rgba(192, 141, 42, 0.41);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  :global {
+    .item {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: #ce9d7d;
+      .name {
+        position: relative;
+        padding-left: 28px;
+        &:before {
+          display: inline-block;
+          content: '';
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          line-height: 100%;
+          background-image: url(./i/unckecked.svg);
+          background-position: 0;
+          background-repeat: no-repeat;
+          background-size: cover;
+          left: 15px;
+          top: 3px;
+        }
+      }
+      .operate {
+        width: 120px;
+        padding-right: 28px;
+        position: relative;
+        overflow:hidden; //超出的文本隐藏
+        text-overflow:ellipsis; //溢出用省略号显示
+        white-space:nowrap; //溢出不换行
+        text-align: right;
+        &::after {
+          display: inline-block;
+          content: '';
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          line-height: 100%;
+          background-image: url(./i/right-arrow.svg);
+          background-position: 0;
+          background-repeat: no-repeat;
+          background-size: contain;
+          right: 0px;
+          top: -3px;
+        }
+      }
+      &.active {
+        color: #9f5d1c;
+        .name::before {
+          background-image: url(./i/checked.svg);
+        }
+        .operate {
+          text-decoration-line: underline;
+          color: #3e881b;
+        }
+      }
+    }
+    .close {
+      position: absolute;
+      width: 32px;
+      height: 39px;
+      line-height: 100%;
+      background-image: url(./i/close.png);
+      background-position: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      cursor: pointer;
+      position: absolute;
+      right: 43px;
+      top: 17px;
+    }
+    .checkcode {
+      width: 76px;
+      height: 34px;
+      border-radius: 20px;
+      background: var(
+        --icon-,
+        linear-gradient(180deg, #fff6ca 0%, #ffed9d 100%)
+      );
+      color: var(---, #9f5d1c);
+      text-align: center;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: -8px;
+    }
+  }
+}
+.checkcode {
+  position: relative;
+  width: 76px;
+  height: 34px;
+  border-radius: 20px;
+  background: var(--icon-, linear-gradient(180deg, #fff6ca 0%, #ffed9d 100%));
+  color: var(---, #9f5d1c);
+  text-align: center;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -8px;
+  border: transparent;
+  &.disabled {
+    opacity: 0.7;
+  }
+  b{
+    position: absolute;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    gap: 4px;
+    height: 19px;
+    position: absolute;
+    width: 156px;
+    left: -156px;
+    top: calc(50% - 44px / 2 + 2.5px);
+    font-weight: normal;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 30px;
+    color: #fff;
+    &.success {
+      display: flex;
+    }
+  }
+}
+
+.number-container,
+.password-container {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  align-items: center;
+  justify-content:  space-around;
+  position: relative;
+  p {
+    margin: 0;
+    font-family: PingFang SC;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: center;
+  }
+  .eye,
+  .lock {
+    width: 24px;
+    height: 24px;
+  }
+  .eye {
+    background: url(./i/eyeopen.svg);
+    &.close {
+      background: url(./i/eyclose.svg);
+    }
+  }
+
+  .lock {
+    position: absolute;
+    background: url(./i/password.svg);
+    left: -31px;
+  }
+  .display{
+    display: block;
+  }
+  .none{
+    display: none;
+  }
+}
+
+.highlight{
+  background-image: url(./i/btn-down.svg) !important;
+}
+.button{
+  margin-top: 13px;
+}
+.store-container{
+  padding: 28px 64px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@import '@shadow/pages/user-center/security-settings/style.module.scss';

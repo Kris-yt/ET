@@ -1,0 +1,50 @@
+.register-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  .withUnderline {
+    display: inline-block;
+    height: 10px;
+    font-size: 10px;
+    color: #9f5d1c;
+    border-bottom: 1px solid #9f5d1c;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+
+    .toLogin {
+      height: 14px;
+      position: absolute;
+      right: 6px;
+      top: 10px;
+      font-size: 12px;
+    }
+    > img.item-image {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+    img.password-eye {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .agreement {
+    color: #c28c57;
+    font-size: 10px;
+    > span {
+      color: #9f5d1c;
+    }
+  }
+}
+
+@import '@shadow/components/business-modals/login/style.module.scss';
+
+@import '@shadow/components/business-modals/register/style.module.scss';

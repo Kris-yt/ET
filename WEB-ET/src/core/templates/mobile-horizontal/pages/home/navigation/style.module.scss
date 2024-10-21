@@ -1,0 +1,145 @@
+.navigation {
+  height: 33px;
+  width: 720px;
+  display: flex;
+  margin: 0px auto;
+  margin-bottom: 11px;
+  align-items: center;
+}
+.nav-item {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #ddb093;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 93px;
+  box-sizing: border-box;
+  //元素间分割线
+  &::before {
+    width: 3px;
+    height: 22.6px;
+    content: '';
+    display: inline-block;
+    background: url(./i/line.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0px;
+  }
+  //第一个元素没有分割线
+  &:first-child::before {
+    width: 0;
+    height: 0;
+  }
+
+  .ic-format{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -2px;
+  }
+  .ic-slot {
+    background-image: url(./i/ic-slot.png);
+  }
+  .ic-TableGame {
+    background-image: url(./i/ic-poker.png);
+  }
+  .ic-casino {
+    background-image: url(./i/ic-casino.png);
+  }
+  .ic-bingo {
+    background-image: url(./i/ic-bingo.png);
+  }
+  .ic-sports {
+    background-image: url(./i/ic-sports.png);
+  }
+  .ic-fishing {
+    margin-right: 4px;
+    background-image: url(./i/ic-fishing.png);
+  }
+  .ic-numericGame {
+    background-image: url(./i/ic-nombericGame.png);
+  }
+
+  .active-format{
+    width: 108px;
+    height: 34px;
+    position: absolute;
+    z-index: 1;
+    left: -5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .active-slot{
+    background-image: url(./i/ac-slot.png);
+    left: 0px;
+  }
+  .active-TableGame{
+    background-image: url(./i/ac-poker.png);
+  }
+  .active-casino{
+    background-image: url(./i/ac-casino.png);
+  }
+  .active-fishing{
+    background-image: url(./i/ac-fishing.png);
+  }
+  .active-bingo{
+    background-image: url(./i/ac-bingo.png);
+  }
+  .active-sports{
+    background-image: url(./i/ac-sports.png);
+  }
+  .active-numericGame{
+    width: 173px;
+    left: -2px;
+    background-image: url(./i/ac-nombericGame.png);
+  }
+
+
+
+  &.slot {
+    width: 97px;
+  }
+  &.numericGame {
+    flex: 1;
+    width: 150px;
+  }
+}
+
+.game-list {
+  height: 200px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  .center{
+    position: relative;
+    .maintain{
+      top: 15%;
+      position: absolute;
+      width: 135px;
+      height: 145px;
+      border-radius: 12px;
+      background: rgba(0, 0, 0, 0.5);
+      left: 13%;
+      text-align: center;
+      font-size: 13px;
+      color: #fff;
+    }
+    > img {
+      width: 160px;
+      height: 200px;
+      margin-left: 10px;
+    }
+  }
+  
+}
+
+@import '@shadow/pages/home/games/style.module.scss';
+
+
+@import '@shadow/pages/home/navigation/style.module.scss';

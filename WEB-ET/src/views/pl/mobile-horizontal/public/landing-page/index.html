@@ -1,0 +1,38 @@
+<!--
+ * @Date: 2024-07-23 15:23:09
+ * @FilePath: /AS-WEB-3.5/src/views/pl/mobile-horizontal/public/landing-page/index.html
+ * @Description:
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="landing-page">
+    <div class="download-content">
+      <a href="" class="download-btn"></a>
+      <div class="download-box">
+        <a class="google-play"></a>
+        <a class="app-store"></a>
+        <a class="app-gallery"></a>
+      </div>
+    </div>
+  </div>
+  <script>
+    function setBodyHeight() {
+      document.body.style.height = `${window.innerHeight}px`;
+    }
+
+    window.addEventListener('resize', setBodyHeight);
+    window.addEventListener('orientationchange', setBodyHeight);
+    setBodyHeight();
+  </script>
+</body>
+
+</html>

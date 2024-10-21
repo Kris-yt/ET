@@ -1,0 +1,42 @@
+.item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.item-title{
+  font-family: 'PingFang SC';
+  font-size:14px;
+  color: #9F5D1C;
+}
+.item-bg {
+  width: 262px;
+  height: 120px;
+  margin: 15px 0;
+  position: relative;
+}
+.item-upload {
+  width: 31px;
+  height: 30px;
+  margin: 31px auto 0;
+}
+.item-content {
+  font-family: 'PingFang SC';
+  color: #c28c57;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 11px;
+}
+
+.file-selector{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none
+}
+
+@import '@shadow/pages/kyc/selfie-id/style.module.scss';

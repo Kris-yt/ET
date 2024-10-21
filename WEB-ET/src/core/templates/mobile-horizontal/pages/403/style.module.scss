@@ -1,0 +1,24 @@
+.ip-403-container {
+  background: url(./i/403-bg.webp) no-repeat center center;
+  background-size: 100% 100%;
+  align-items: center;
+  .ip-403-content {
+    width: 589px;
+    height: 330px;
+    background: url(./i/403-tips.png) no-repeat center center;
+    background-size: 100% 100%;
+    margin-top: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .ip-403-btns{
+      width: 330px;
+      position: absolute;
+      bottom: 37px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@import '@shadow/pages/403/style.module.scss';

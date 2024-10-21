@@ -1,0 +1,43 @@
+.panel-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 144px;
+  height: 46px;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  color: #c28c57;
+  font-size: 16px;
+  margin-bottom: 6px;
+
+  @include button-active;
+  &.unchecked {
+    background: url(./i/uncheck.png) no-repeat center center / 100% 100%;
+  }
+  &.checked {
+    background: url(./i/checked.png) no-repeat center center / 100% 100%;
+    font-weight: 600;
+    color: transparent;
+    -webkit-text-fill-color: #ffe7b9;
+    -webkit-text-stroke: 1px #e17b00;
+  }
+  &.lg {
+    width: 156px;
+    height: 54px;
+    &.unchecked {
+      background-image: url(./i/uncheck-lg.png) no-repeat center center / 100%
+        100%;
+    }
+    &.checked {
+      background-image: url(./i/checked-lg.png) no-repeat center center / 100%
+        100%;
+      font-weight: 600;
+      color: transparent;
+      -webkit-text-fill-color: #ffe7b9;
+      -webkit-text-stroke: 1px #e17b00;
+    }
+  }
+}
+
+@import '@shadow/components/panel/button/style.module.scss';

@@ -1,0 +1,15 @@
+.date-picker-container {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  justify-content: space-between;
+  >div{
+    width: 112px;
+    >span >div{
+      width: 100%;
+    }
+  }
+}
+
+@import '@shadow/components/date-picker/style.module.scss';

@@ -1,0 +1,88 @@
+// 请在此文件中编写影子组件的样式（以覆盖 @templates 中相同的组件样式）
+.withdraw-container {
+  overflow-y: auto;
+  .info {
+    width: 530px;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    .infoBoxFormat {
+      height: 55px;
+      border-radius: 12px;
+      background: linear-gradient(
+        185.89deg,
+        #dd9257 3.31%,
+        #bc6441 73.77%,
+        #b95e3f 94.03%
+      );
+      box-shadow: 0px 2px 2px 0px rgba(59, 23, 10, 0.5);
+      padding: 0px 10px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      .itemFormat {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        color: #ffe7b9;
+        line-height: 20px;
+        font-weight: 400;
+        :last-child {
+          font-size: 16px;
+          font-weight: 700;
+          color: #ffe7b9;
+        }
+      }
+    }
+    .turnoverBox {
+      width: 351px;
+    }
+    .avaiBox {
+      width: 172px;
+      .avaiItem {
+        width: 100%;
+      }
+    }
+  }
+  .method {
+    width: 100%;
+    .title {
+      width: 100%;
+      line-height: 37px;
+      color: #9f5d1c;
+      font-weight: 400;
+      font-size: 14px;
+    }
+    .selects {
+      width: 400px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .amount{
+      width: 50%;
+    }
+    .method-tips{
+      line-height: 30px;
+      color: #c28c57;
+      font-weight: 400;
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+  .confirm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+
+    .disable-btn{
+      filter: grayscale;
+    }
+  }
+}
+
+@import '@shadow/pages/withdraw/style.module.scss';

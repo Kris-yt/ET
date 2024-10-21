@@ -1,0 +1,45 @@
+.medium-panel-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 552px;
+  height: 308px;
+  transform: translate(-50%, -50%);
+
+  .close {
+    position: absolute;
+    width: 36px;
+    height: 40px;
+    right: 12px;
+    top: -2px;
+    background: center / 100% 100% url(./i/close.png) no-repeat;
+    @include button-active;
+  }
+  :global {
+    .panel-content {
+      padding: 24px 28px 64px;
+      font-size: 14px;
+      height: 100%;
+      margin-right: 2px;
+      font-family: "PingFang SC";
+      box-sizing: border-box;
+
+      &.no-head { padding-bottom: 36px }
+    }
+    .panel-head {
+      height: 24px;
+      .title {
+        color: #3e881b;
+        text-align: center;
+        font-size: 16px;
+      }
+    }
+    .panel-body {
+      height: 100%;
+      border-radius: 4px;
+      overflow-x: hidden;
+    }
+  }
+}
+
+@import '@shadow/components/medium-panel/style.module.scss';

@@ -1,0 +1,79 @@
+.panel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 653px;
+  height: 309px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 24px 29px 30px;
+  box-sizing: border-box;
+  .close{
+    width: 32px;
+    height: 39px;
+    position: absolute;
+    top: -2px;
+    right: 11px ;
+    @include button-active;
+    img{
+      width: 100%;
+    }
+  }
+  .arrow{
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    bottom: 36px;
+    right: 31px ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 99;
+    @include button-active;
+    img{
+      width: 100%;
+    }
+  }
+  .title{
+    width: 100%;
+    text-align: center;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #3E881B;
+  }
+  .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+
+    .rules{
+      font-size: 14px;
+      line-height: 19.6px;
+      color: #9F5D1C;
+      font-weight: 400;
+      h3{
+        font-size: 16px;
+        font-weight: 600;
+      }
+      span{
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  .accept-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 10px;
+  }
+}
+
+
+
+@import '@shadow/components/business-modals/agreement/style.module.scss';

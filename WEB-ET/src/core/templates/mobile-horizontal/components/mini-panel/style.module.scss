@@ -1,0 +1,124 @@
+.mini-panel-container {
+  display: flex;
+  flex-direction: column;
+  width: 423px;
+  height: 281px;
+  position: relative;
+
+  .title {
+    @include font-baloo-title;
+    height: 44px;
+    line-height: 40px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffe7b9;
+    text-align: center;
+    font-size: 24px;
+  }
+  .content {
+    height: 200px;
+    width: 380px;
+    margin: auto;
+    margin-top: 0;
+    display: flex;
+    color: #9f5d1c;
+    font-size: 14px;
+  }
+  .close {
+    position: absolute;
+    top: 38px;
+    right: 12px;
+    width: 32px;
+    height: 39px;
+    background: url(./i/close.png) no-repeat center center / 100% 100%;
+    @include button-active;
+  }
+}
+
+.mini-panel-container-m {
+  display: flex;
+  flex-direction: column;
+  width: 549px;
+  height: 330px;
+  position: relative;
+  .title {
+    @include font-baloo-title;
+    height: 44px;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffe7b9;
+    text-align: center;
+    font-size: 24px;
+  }
+  .content {
+    height: 256px;
+    width: 427px;
+    margin: auto;
+    margin-top: 5px;
+    display: flex;
+    color: #9f5d1c;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+  .close {
+    position: absolute;
+    top: 18px;
+    right: 48px;
+    width: 32px;
+    height: 39px;
+    background: url(./i/close.png) no-repeat center center / 100% 100%;
+    @include button-active;
+  }
+}
+.mini-panel-container-b {
+  display: flex;
+  flex-direction: column;
+  width: 640px;
+  height: 345px;
+  position: relative;
+  .title {
+    @include font-baloo-title;
+    height: 44px;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffe7b9;
+    text-align: center;
+    font-size: 24px;
+  }
+  .content {
+    width: 538px;
+    height:274px;
+    background: url(./i/content.png) no-repeat center center;
+    background-size: cover;
+   // margin: auto;
+    margin-top: 5px;
+    display: flex;
+    color: #9f5d1c;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 5px;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-left:50px;
+    margin-top: 6px;
+  }
+  .close {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    width: 32px;
+    height: 39px;
+    background: url(./i/close.png) no-repeat center center / 100% 100%;
+    @include button-active;
+  }
+}
+@import '@shadow/components/mini-panel/style.module.scss';

@@ -1,0 +1,61 @@
+.forgotpassword-container {   
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  .item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    > img.item-image {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+    img.password-eye {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .checkcode {
+    font-family: 'PingFang SC';
+    position: relative;
+    width: 76px;
+    height: 34px;
+    border-radius: 20px;
+    background: var(--icon-, linear-gradient(180deg, #fff6ca 0%, #ffed9d 100%));
+    color: var(---, #9f5d1c);
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -6px;
+    &.disabled {
+      opacity: 0.5;
+      pointer-events:none;
+    }
+    &.active{
+      pointer-events: auto;
+    }
+  }
+  .item2{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  .authusername{
+    margin-top: 20px;
+  }
+  .height20{
+    height: 20px;
+    width: 100%;
+  }
+  .forget-password {
+    color: #9f5d1c;
+    font-size: 14px;
+  }
+}
+@import '@shadow/components/business-modals/fotgot-password/style.module.scss';

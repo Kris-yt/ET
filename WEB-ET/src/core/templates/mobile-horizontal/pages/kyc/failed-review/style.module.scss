@@ -1,0 +1,36 @@
+.item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.item-icon {
+  width: 98px;
+  height: 79px;
+  margin: 30px 0 10px;
+}
+.item-box {
+  width: 455px;
+  margin: 0 auto 25px;
+}
+.item-content {
+  color: #c28c57;
+  font-size: 16px;
+}
+.item-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #efca81;
+  margin: 14px 0;
+}
+.item-tips {
+  color: #eb212d;
+  font-size: 16px;
+  height: 20px;
+  overflow-y: auto;
+  >span{
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+}
+@import '@shadow/pages/kyc/failed-review/style.module.scss';
