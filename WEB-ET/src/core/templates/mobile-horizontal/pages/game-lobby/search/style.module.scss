@@ -1,0 +1,37 @@
+.search{
+  height: 272px;
+  overflow: hidden;
+  .search-box{
+    height: 72px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    .check{
+      width: 24px;
+      height: 24px;
+      background: url(./i/search.png?format=webp) no-repeat center center / 100% 100%;
+    }
+  }
+  .conter{
+    display: flex;
+    height: 200px;
+    overflow: auto;
+    .list{
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: flex-start;
+      margin-top: 10px;
+      width: 408px;
+      .wrap{
+        list-style: none;
+        width: 90px;
+        height: 90px;
+        margin: 0 5px 5px 5px;
+        border-radius: 5px;
+        border: 1px solid #6F2B0333;
+      }
+    }
+  }
+}
+

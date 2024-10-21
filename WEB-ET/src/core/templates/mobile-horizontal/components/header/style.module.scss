@@ -1,0 +1,119 @@
+.header {
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  box-sizing: border-box;
+  .loginStatusBox {
+    width: auto;
+    height: 58px;
+    display: flex;
+    align-items: center;
+
+    .logined {
+      width: 184px;
+      height: 58px;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      .profile{
+        width: 48px;
+        height: 50px;
+        background: url('./i/profile.png') no-repeat center center/100% 100%;
+        margin-left: 25px;
+        margin-top: 6px;
+      }
+      .user-right{
+        margin-left: 3px;
+        display: flex;
+        flex-direction: column;
+     }
+     .user-bg{
+      width: 92px;
+      height: 16px;
+      position: absolute;
+      top: 15px;
+      right: 16px;
+      background: url('./i/username-bg.png') no-repeat center center/100% 100%;
+      display: flex;
+      flex-direction: row;
+      .username {
+        font-size: 14px;
+        border-radius: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #ffdeac;
+        box-sizing: border-box;
+        padding-left: 5px;
+      }
+      .copy{
+        width: 16px;
+        height: 16px;;
+      }
+    }
+      .vipLevel {
+        width: 55px;
+        height: 17px;
+        position: absolute;
+        bottom: 8px;
+        right: 53px;
+        > img {
+          width: 100%;
+        }
+      }
+    }
+    .noLogin {
+      width: auto;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      .register-button {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .notice-bar {
+    width: 341px;
+    height: 24px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #ffde99;
+    font-size: 10px;
+  }
+  .notice-item{
+    margin-right: 10px;
+  }
+  .showCoinBox {
+    width: 150px;
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 19px;
+    .item-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+    }
+    .item-amount {
+      flex: 1;
+      line-height: 28px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff1c9;
+    }
+  }
+
+  .logo-icon {
+    margin-left: auto;
+    width: 48px;
+    height: 42px;
+  }
+}
+@import '@shadow/components/header/style.module.scss';

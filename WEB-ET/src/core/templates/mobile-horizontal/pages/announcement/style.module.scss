@@ -1,0 +1,88 @@
+.announcement {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0px 6px 0px 0px;
+  box-sizing: border-box;
+  .content-box {
+    display: flex;
+    flex-direction: column;
+    width: 408px;
+    height: 100%;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    .title {
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      color: #3e881b;
+      font-size: 16px;
+      font-weight: 500;
+      word-break: break-word;
+    }
+    .text {
+      flex: 1;
+      margin: 6px 0;
+      color: #9f5d1c;
+      font-size: 14px;
+      word-break: break-word;
+      overflow-y: auto;
+    }
+    .time {
+      text-align: right;
+      color: #c28c57;
+      font-size: 12px;
+    }
+    .no-data {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      color: #c28c57;
+      font-size: 12px;
+      .no-data-img {
+        width: 86px;
+        height: 86px;
+        background: url(@templates/pages/message-center/i/no-data.svg) no-repeat
+          center / 100% 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .left-box {
+    width: 144px;
+    padding-bottom: 6px;
+    box-sizing: border-box;
+    .item-list {
+      width: 100%;
+      height: 100%;
+      overflow-y: auto;
+      .tab {
+        position: relative;
+        margin-bottom: 6px;
+        padding: 0 4px;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        > span {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .unread {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 12px;
+          height: 12px;
+          background: url(@templates/pages/message-center/i/unread.svg)
+            no-repeat center center / 100% 100%;
+        }
+      }
+    }
+  }
+}
+
+@import '@shadow/pages/announcement/style.module.scss';

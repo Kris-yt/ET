@@ -1,0 +1,32 @@
+.verifyContainer {
+  width: 100%;
+  height: 100%;
+
+  .verify-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    color: #9f5d1c;
+    font-weight: 400;
+  }
+  .verify-tips {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+  }
+  .checkcode {
+    width: 76px;
+    height: 34px;
+    border-radius: 20px;
+    background: var(--icon-, linear-gradient(180deg, #fff6ca 0%, #ffed9d 100%));
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -8px;
+  }
+}
+
+@import '@shadow/components/business-modals/verity-code/style.module.scss';

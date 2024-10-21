@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+}
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  background: url(./i/bg.png) no-repeat top center / cover;
+}
+
+.download-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 13.33vw;
+}
+
+.download-content .download-btn {
+  width: 33.6%;
+  height: 31.46vw;
+  background: url(./i/button.png) no-repeat center / 100% 100%;
+}
+
+.download-content .download-box {
+  display: flex;
+  justify-content: space-between;
+  width: 89.6%;
+  margin-top: 30px;
+}
+
+.download-content .download-box > a {
+  width: 28.26vw;
+  height: 10.66vw;
+}
+
+.download-content .download-box > a.google-play {
+  background: url(./i/google-play.png) no-repeat center / 100% 100%;
+}
+
+.download-content .download-box > a.app-store {
+  background: url(./i/app-store.png) no-repeat center / 100% 100%;
+}
+
+.download-content .download-box > a.app-gallery {
+  background: url(./i/app-gallery.png) no-repeat center / 100% 100%;
+}

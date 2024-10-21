@@ -1,0 +1,115 @@
+.login-container,.register-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  .item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+    img.item-image {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+    img.password-eye {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .more {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    .login-type {
+      color: #9f5d1c;
+      font-size: 14px;
+    }
+    .register {
+      color: #9f5d1c;
+      font-size: 14px;
+    }
+  }
+
+  .checkcode {
+    font-family: 'PingFang SC';
+    position: relative;
+    width: 76px;
+    height: 34px;
+    border-radius: 20px;
+    background: var(--icon-, linear-gradient(180deg, #fff6ca 0%, #ffed9d 100%));
+    color: var(---, #9f5d1c);
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -6px;
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    &.active {
+      pointer-events: auto;
+    }
+  }
+
+  .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2px;
+    .agreement {
+      color: #c28c57;
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      input[type='checkbox'] {
+        display: none;
+      }
+      input[type='checkbox'] + label:before {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-right: 7px;
+        vertical-align: middle;
+        background-image: url(./i//uncheck.png);
+        background-size: contain;
+      }
+      input[type="checkbox"]:checked + label:before {
+        background-image: url(./i//checked.png);
+      }
+      > span {
+        color: #9f5d1c;
+      }
+      .withUnderline {
+        display: inline-block;
+        height: 12px;
+        font-size: 10px;
+        color: #9f5d1c;
+        border-bottom: 1px solid #9f5d1c;
+      }
+    }
+    .btn{
+      margin: 12px 0px;
+    }
+    .des{
+      width: 267px;
+      height: 33px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+@import '@shadow/components/business-modals/login/style.module.scss';

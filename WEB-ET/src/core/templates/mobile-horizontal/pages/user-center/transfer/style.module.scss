@@ -1,0 +1,205 @@
+:root {
+  --rec-primary-gold-color: #9f5d1c;
+  --rec-secondary-gold-color: #c28c57;
+  --rec-positive-status: #3e881b;
+  --rec-negative-status: #eb212d;
+  --bg-gradient-line: #e9c274;
+}
+
+.trans-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 14px);
+  margin: 10px;
+  overflow-y: scroll;
+
+  :global {
+    .trans-item-container .trans-item > * {
+      width: 160px;
+      height: 48px;
+      font-size: 17px;
+    }
+    .trans-item {
+      display: block;
+      padding: 4px;
+    }
+  }
+}
+
+.rec-container {
+  width: 100%;
+  padding: 10px;
+  color: var(--rec-secondary-gold-color);
+  font-size: 12px;
+  font-family: PingFang SC;
+
+  :global {
+    .rec-head {
+      display: flex;
+      align-items: center;
+      padding: 8px 4px;
+
+      .rec-head_item {
+        display: flex;
+        padding-right: 20px;
+        align-items: center;
+      }
+
+      .trigger-icon {
+        width: 10px;
+        height: 10px;
+        margin-left: 4px;
+        transform: rotate(-90deg);
+      }
+    }
+
+    .rec-body { height: calc(100% - 28px) }
+
+    .rec-content {
+      position: relative;
+      height: 100%;
+      overflow-x: hidden;
+      border-radius: 4px;
+      box-shadow: inset 0 4px 10px #e8b34d;
+
+      .no-data-lyr {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+
+    .rec-list {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .table-head,
+    td[class^='state_'] {
+      text-transform: capitalize;
+      color: var(--rec-positive-status);
+    }
+
+    .table-head {
+      position: sticky;
+      top: 0;
+      height: 36px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      color: var(--rec-primary-gold-color);
+      background-color: #f8e09f;
+      box-shadow: inset 0 1px 6px #e8b34d;
+      z-index: 1;
+    }
+
+    .table-item {
+      text-align: center;
+      border-bottom: 1px solid rgb(190, 140, 40, 0.5);
+
+      > td { padding: 8px 6px }
+      .data-status { text-wrap: nowrap }
+      .item-money { color: var(--rec-primary-gold-color) }
+      .item-time {
+        white-space: pre-line;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.detail-wrapper {
+  --rec-detail-key-width: 45%;
+
+  :global {
+    .head-info, .body-info, .footer-info {
+      display: flex;
+    }
+    .detail-left, .detail-right {
+      width: 100%;
+    }
+    .detail-item {
+      display: flex;
+      margin: 12px 8px 0;
+    }
+    .wide-space {
+      .detail-key {
+        width: calc(var(--rec-detail-key-width) / 2 - .75%);
+        min-width: calc(var(--rec-detail-key-width) / 2 - .75%);
+      }
+    }
+    .detail-key {
+      width: var(--rec-detail-key-width);
+      min-width: var(--rec-detail-key-width);
+      align-content: center;
+      margin-right: 8px;
+      text-align: right;
+      color: var(--rec-secondary-gold-color);
+    }
+    .detail-value {
+      display: flex;
+      align-items: center;
+      word-break: break-all;
+      color: var(--rec-primary-gold-color);
+      &.item-time {
+        white-space: pre-line;
+        text-align: center;
+      }
+    }
+    .panel-body {
+      box-shadow: inset 0 4px 8px #e8b34d;
+    }
+    .game-code {
+      max-height: 2rem;
+      overflow: hidden;
+    }
+    .copy-btn {
+      min-width: 16px;
+      height: 16px;
+    }
+
+  }
+}
+
+.anchor-point {
+  min-height: 100%;
+  background: linear-gradient(to right, transparent 49.875%, var(--bg-gradient-line) 49.875%, var(--bg-gradient-line) 50.125%, transparent 50.125%)
+}
+
+// 请用 style['rec-status-wrap'] 载入状态样式
+.rec-status-wrap {
+  :global {
+    ._st {
+      &_dep-d_0,
+      &_wdl-d_3, &_wdl-d_4, &_wdl-d_5, &_wdl-d_6 {
+        color: var(--rec-primary-gold-color);
+      }
+      &_1, &_3, &_L, &_V,
+      &_dep_3,
+      &_dep-d_3,
+      &_wdl_1,
+      &_wdl-d_1 {
+        color: var(--rec-negative-status);
+        &.signed::before { content: "-" }
+      }
+      &_0, &_2, &_W,
+      &_dep_1, &_dep_2,
+      &_dep-d_1, &_dep-d_2,
+      &_wdl_2,
+      &_wdl-d_2 {
+        color: var(--rec-positive-status);
+        &.signed::before { content: "+" }
+      }
+    }
+    .more::after {
+      position: absolute;
+      content: '';
+      width: 18px;
+      height: 18px;
+      background: center / contain url(./i/right-arrow.svg) no-repeat;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@import '@shadow/pages/user-center/transfer/style.module.scss';

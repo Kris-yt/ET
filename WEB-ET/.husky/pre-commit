@@ -1,0 +1,6 @@
+###
+ # @Date: 2024-07-25 10:20:31
+ # @FilePath: /AS-WEB-3.5/.husky/pre-commit
+ # @Description:
+###
+npx lint-staged

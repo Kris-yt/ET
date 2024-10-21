@@ -1,0 +1,74 @@
+@media screen and (orientation: landscape) {
+.panel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 653px;
+  height: 309px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 24px 29px 30px;
+  box-sizing: border-box;
+  .close{
+    width: 32px;
+    height: 39px;
+    position: absolute;
+    top: -2px;
+    right: 11px ;
+    @include button-active;
+    img{
+      width: 100%;
+    }
+  }
+
+}
+.rule-container {
+  flex: 1;
+  padding: 14px;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
+  color: #9f5d1c;
+  overflow-y: auto;
+}
+}
+@media screen and (orientation: portrait) {
+  .panel-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 653px;
+    height: 309px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 24px 29px 30px;
+    box-sizing: border-box;
+    .close{
+      width: 32px;
+      height: 39px;
+      position: absolute;
+      top: -2px;
+      right: 11px ;
+      @include button-active;
+      img{
+        width: 100%;
+      }
+    }
+  
+  }
+  .rule-container {
+    display: none;
+    flex: 1;
+    padding: 14px;
+    font-size: 14px;
+    line-height: 20px;
+    box-sizing: border-box;
+    color: #9f5d1c;
+    overflow-y: auto;
+  }
+}
+@import '@shadow/components/business-modals/disclaimer/style.module.scss';

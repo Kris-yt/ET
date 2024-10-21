@@ -1,0 +1,213 @@
+@media screen and (orientation: landscape) {
+  .panel-container {
+    display: flex;
+    flex-direction: column;
+    width: 553px;
+    height: 309px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 74px 29px 30px;
+    box-sizing: border-box;
+    .close{
+      width: 32px;
+      height: 39px;
+      position: absolute;
+      top: 33px;
+      right: 11px ;
+      @include button-active;
+      img{
+        width: 100%;
+      }
+    }
+    .content-container{
+      width: 100%;
+      height: 263px;
+      display: flex;
+      flex-direction: column;
+    }
+    .careful{
+      color: #C28C57;
+      font-family: 'PingFang SC';
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .withUnderline{
+      color:#9F5D1C;
+      font-family: 'PingFang SC';
+      font-size: 13px;
+      display: inline-block;
+      border-bottom: 1px solid #9f5d1c;
+    }
+    .checkbox-container{
+       width:487px;
+       height:134px;
+       background-color:#F3D491;
+       box-shadow: 0px 2px 4px 0px #C08D2A69 inset;
+       box-shadow: 0px 2px 4px 0px #FFEBBD;
+       border-radius: 8px;
+       display: flex;
+       flex-direction: column;
+       margin-bottom: 8px;
+       overflow-y: auto;
+       .age,.government,.police,.NDRP,.GEL,.CREDITS,.agreement,.agree-all-mentioned{
+         font-size: 13px;
+         font-family: 'PingFang SC';
+         color:#9F5D1C;
+         line-height: 18.8px;
+      }
+      .age{
+        padding: 8px 7px;
+      }
+      .government,.GEL,.agreement,.police,.NDRP,.GEL,.CREDITS{
+        padding:0 7px 9px 7px;
+      }
+      .agree-all-mentioned{
+        width: calc(100% - 7px);
+        height: 25px;
+        line-height: 25px;
+        background: #EBBF61;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        padding-left: 7px;
+      }
+      input[type='checkbox'] {
+        display: none;
+      }
+      input[type='checkbox'] + label:before {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-right: 7px;
+        vertical-align: middle;
+        background-image: url(./i//uncheck.png);
+        background-size: contain;
+      }
+      input[type="checkbox"]:checked + label:before {
+        background-image: url(./i//checked.png);
+      }
+    }
+    .foot-container{
+      display: flex;
+      flex-direction: row;
+      justify-content:space-between;
+      margin-bottom: 6px;
+      .des{
+        width: 227px;
+        height: 34px;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (orientation: portrait) {
+  .panel-container {
+    display: none;
+    flex-direction: column;
+    width: 553px;
+    height: 309px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 74px 29px 30px;
+    box-sizing: border-box;
+    .close{
+      width: 32px;
+      height: 39px;
+      position: absolute;
+      top: 33px;
+      right: 11px ;
+      @include button-active;
+      img{
+        width: 100%;
+      }
+    }
+    .content-container{
+      width: 100%;
+      height: 263px;
+      display: flex;
+      flex-direction: column;
+    }
+    .careful{
+      color: #C28C57;
+      font-family: 'PingFang SC';
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .withUnderline{
+      color:#9F5D1C;
+      font-family: 'PingFang SC';
+      font-size: 13px;
+      display: inline-block;
+      border-bottom: 1px solid #9f5d1c;
+    }
+    .checkbox-container{
+       width:487px;
+       height:134px;
+       background-color:#F3D491;
+       box-shadow: 0px 2px 4px 0px #C08D2A69 inset;
+       box-shadow: 0px 2px 4px 0px #FFEBBD;
+       border-radius: 8px;
+       display: flex;
+       flex-direction: column;
+       margin-bottom: 8px;
+       overflow-y: auto;
+       .age,.government,.police,.NDRP,.GEL,.CREDITS,.agreement,.agree-all-mentioned{
+         font-size: 13px;
+         font-family: 'PingFang SC';
+         color:#9F5D1C;
+         line-height: 18.8px;
+      }
+      .age{
+        padding: 8px 7px;
+      }
+      .government,.GEL,.agreement,.police,.NDRP,.GEL,.CREDITS{
+        padding:0 7px 9px 7px;
+      }
+      .agree-all-mentioned{
+        width: calc(100% - 7px);
+        height: 25px;
+        line-height: 25px;
+        background: #EBBF61;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        padding-left: 7px;
+      }
+      input[type='checkbox'] {
+        display: none;
+      }
+      input[type='checkbox'] + label:before {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-right: 7px;
+        vertical-align: middle;
+        background-image: url(./i//uncheck.png);
+        background-size: contain;
+      }
+      input[type="checkbox"]:checked + label:before {
+        background-image: url(./i//checked.png);
+      }
+    }
+    .foot-container{
+      display: flex;
+      flex-direction: row;
+      justify-content:space-between;
+      margin-bottom: 6px;
+      .des{
+        width: 227px;
+        height: 34px;
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@import '@shadow/pages/home/limitmodules/style.module.scss';

@@ -1,0 +1,11 @@
+.rule-container {
+  flex: 1;
+  padding: 14px;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
+  color: #9f5d1c;
+  overflow-y: auto;
+}
+
+@import '@shadow/components/business-modals/term-services/style.module.scss';

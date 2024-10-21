@@ -1,0 +1,99 @@
+.binding-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .binding-title {
+    width: 100%;
+    line-height: 48px;
+    text-align: center;
+    color: #c28c57;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .binding-list {
+    width: 365px;
+    box-shadow:
+      0px 2px 4px 0px #c08d2a69 inset,
+      0px 2px 4px 0px #ffebbd;
+    background: #f3d491;
+    border-radius: 8px;
+    padding: 32px 33px;
+    box-sizing: border-box;
+    .isBinding {
+      color: #9f5d1c;
+    }
+
+    li {
+      width: 299px;
+      height: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #ce9d7d;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 26px;
+      .left {
+        display: flex;
+        align-items: center;
+
+        .ic-left {
+          width: 14px;
+          height: 14px;
+          margin-right: 6px;
+          margin-top: -2px;
+        }
+      }
+      .right {
+        line-height: 24px;
+        position: relative;
+        text-align: end;
+        padding-right: 22px;
+        &::after {
+          width: 20px;
+          height: 20px;
+          content: '';
+          background-image: url(./i/ic-right.png);
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          position: absolute;
+          top: 50%;
+          right: 0px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    & li:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.bindNumberContainer {
+  width: 100%;
+  height: 100%;
+
+  .bindNumber-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .checkcode {
+    width: 76px;
+    height: 34px;
+    border-radius: 20px;
+    background: var(--icon-, linear-gradient(180deg, #fff6ca 0%, #ffed9d 100%));
+    color: #9f5d1c;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -8px;
+  }
+}
+
+@import '@shadow/pages/withdraw/info-bind/style.module.scss';

@@ -1,0 +1,53 @@
+
+.login-panel-container-m {
+  display: flex;
+  flex-direction: column;
+  width: 589px;
+  height: 332px;
+  position: relative;
+  .title-tab{
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+  }
+  .title-register,.title-login {
+    @include font-baloo;
+    width: 164px;
+    height: 44px;
+    line-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  #9A6026;
+    text-align: center;
+    box-shadow: 0px 0.5px 0px 0px #7B451F inset;
+    font-size: 24px;
+  }
+ 
+  .active{
+    color:#ffe7b9;
+    @include font-baloo-title;
+
+  }
+  .content {
+    height: 256px;
+    width: 427px;
+    margin: auto;
+    margin-top: 5px;
+    display: flex;
+    color: #9f5d1c;
+    font-size: 14px;
+    padding: 8px 20px;
+    box-sizing: border-box;
+  }
+  .close {
+    position: absolute;
+    top: 18px;
+    right: 48px;
+    width: 32px;
+    height: 39px;
+    background: url(./i/close.png) no-repeat center center / 100% 100%;
+    @include button-active;
+  }
+}
+@import '@shadow/components/login-panel/style.module.scss';

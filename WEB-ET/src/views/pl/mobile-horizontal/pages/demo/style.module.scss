@@ -1,0 +1,58 @@
+.demo {
+  padding: 5px;
+  background-color: bisque;
+  overflow-y: auto;
+  height: 100vh;
+  display: block;
+  > div {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .phone-code {
+    color: #ffe7b9;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    font-weight: bold;
+  }
+  .checkcode {
+    width: 76px;
+    height: 34px;
+    border-radius: 20px;
+    background: var(--icon-, linear-gradient(180deg, #fff6ca 0%, #ffed9d 100%));
+    color: var(---, #9f5d1c);
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -8px;
+  }
+  .cus-tips {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    margin-top: 5px;
+    color: lightgreen;
+    display: flex;
+    align-items: center;
+    background: url(./i/tips-bg.png) no-repeat center center / 100% 100%;
+  }
+}
+
+.go-back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 37px;
+  height: 37px;
+  background: url(./i/back.png) no-repeat center center / 100% 100%;
+  z-index: 100;
+  @include button-active;
+  @media screen and (max-width: 768px) {
+    top: -16px;
+    left: 30px;
+  }
+}

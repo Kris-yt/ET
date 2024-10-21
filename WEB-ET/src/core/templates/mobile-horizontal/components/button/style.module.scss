@@ -1,0 +1,41 @@
+.button-container {
+  @include font-baloo;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  color: #3e881b;
+  text-shadow: 0px 0.4px 0.2px #a8ed62;
+  font-size: 20px;
+  border: 0;
+  @include button-active;
+  &.sm {
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    background: transparent;
+  }
+  &.md {
+    width: 155px;
+    height: 46px;
+    background: transparent;
+  }
+  &.lg {
+    width: 208px;
+    height: 52px;
+    background: transparent;
+  }
+  &.xd{
+    width: 131px;
+    height: 34px;
+    background: transparent;
+    font-size: 14px;
+  }
+  &.sd{
+    width: 124px;
+    height: 40px;
+    background: transparent;
+  }
+}
+
+@import '@shadow/components/button/style.module.scss';
