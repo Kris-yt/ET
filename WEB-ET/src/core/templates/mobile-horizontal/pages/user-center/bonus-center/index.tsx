@@ -24,7 +24,7 @@ export default () => {
   const [typeValue, setTypeValue] = useState('0')
   const [statusValue, setStatusValue] = useState('0')
 
-  const { containerRef, updateDoQuery } =
+  const { scrollableRef, containerRef, updateDoQuery } =
     usePullUpLoadmore<HTMLTableSectionElement>({
       data,
       amountOfDataSize: recordsCount,
@@ -65,7 +65,7 @@ export default () => {
         </div>
       </div>
       <div className="bonus-body">
-        <div className="bonus-content">
+        <div ref={scrollableRef} className="bonus-content">
           <table className="bonus-list">
             <thead className="table-head">
               <tr>

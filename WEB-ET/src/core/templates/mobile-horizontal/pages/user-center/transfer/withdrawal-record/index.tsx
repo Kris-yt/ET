@@ -30,7 +30,7 @@ export default () => {
   const [status, setStatus] = useState<optionUnionType>('0')
   const [timeRange, setTimeRange] = useState<optionUnionType>('0')
 
-  const { containerRef, updateDoQuery } =
+  const { scrollableRef, containerRef, updateDoQuery } =
     usePullUpLoadmore<HTMLTableSectionElement>({
       data,
       amountOfDataSize: recordsCount,
@@ -65,7 +65,7 @@ export default () => {
         </div>
       </div>
       <div className="rec-body">
-        <div className="rec-content">
+        <div ref={scrollableRef} className="rec-content">
           <table className="rec-list">
             <thead className="table-head">
               <tr>

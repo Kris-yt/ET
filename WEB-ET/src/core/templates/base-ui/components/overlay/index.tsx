@@ -25,12 +25,6 @@ const Overlay = ({
 
   // 使用Portal脱离文档流
   React.useEffect(() => {
-    const html = document.documentElement
-    const body = document.body
-    const h = window.innerHeight + 'px'
-    html.style.height = h
-    body.style.height = h
-    thisNode.current.style.height = h
     document.body.appendChild(thisNode.current)
     return () => {
       window.document.body.removeChild(thisNode.current)

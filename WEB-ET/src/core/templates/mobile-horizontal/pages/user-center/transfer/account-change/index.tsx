@@ -27,7 +27,7 @@ export default () => {
   const [status, setStatus] = useState<optionUnionType>('0')
   const [timeRange, setTimeRange] = useState<optionUnionType>('0')
 
-  const { containerRef, updateDoQuery } =
+  const { scrollableRef, containerRef, updateDoQuery } =
     usePullUpLoadmore<HTMLTableSectionElement>({
       data,
       amountOfDataSize: recordsCount,
@@ -79,7 +79,7 @@ export default () => {
         </div>
       </div>
       <div className="rec-body">
-        <div className="rec-content">
+        <div ref={scrollableRef} className="rec-content">
           <table className="rec-list">
             <thead className="table-head">
               <tr>
@@ -97,16 +97,9 @@ export default () => {
                     <td className="item-time">{displayDateTime(item.times)}</td>
                     <td>{item.orderno}</td>
                     <td
-                      style={{
-                        color:
-                          item.operations == '1'
-                            ? 'var(--rec-positive-status)'
-                            : 'var(--rec-negative-status)',
-                      }}
+                      className={`data-item _st_${+item.amount !== 0 ? (item.operations != '1' ? '1' : '0') : 'def'} ${+item.amount > 0 ? 'signed' : ''}`}
                     >
-                      {item.operations == '1'
-                        ? `+${displayCurrency(item.amount)}`
-                        : `-${displayCurrency(item.amount)}`}
+                      {displayCurrency(item.amount)}
                     </td>
                     <td>{item.cntitle}</td>
                     <td className={`_st_${item.transferstatus}`}>

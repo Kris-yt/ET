@@ -18,6 +18,7 @@ export default <T extends HTMLElement>({
   querys,
   onLoadMore,
 }: IProps) => {
+  const scrollableRef = useRef<T | null>(null)
   const containerRef = useRef<T | null>(null)
   const lastObserverRef = useRef<IntersectionObserver | null>(null)
 
@@ -26,37 +27,34 @@ export default <T extends HTMLElement>({
   useEffect(() => {
     if (!data || querySize >= amountOfDataSize) return
 
-    const observer = new IntersectionObserver(handleLastObserver, {
+    lastObserverRef.current = new IntersectionObserver(handleLastObserver, {
       threshold: 0.5,
     })
 
-    lastObserverRef.current = observer
-
-    const rows = containerRef.current?.children
-    if (rows?.length) {
-      lastObserverRef.current?.observe(rows[rows.length - 1])
-    }
+    const lastItem = containerRef.current?.lastElementChild
+    if (lastItem) lastObserverRef.current?.observe(lastItem)
 
     return () => {
-      observer.disconnect()
+      lastObserverRef.current?.disconnect()
       lastObserverRef.current = null
     }
-  }, [JSON.stringify(data)])
+  }, [data])
 
   const handleLastObserver = (entries: IntersectionObserverEntry[]) => {
-    if (querySize >= amountOfDataSize) return
     const target = entries[0]
     if (target.isIntersecting) {
       lastObserverRef.current?.disconnect()
       onLoadMore()
     }
   }
+
   const updateDoQuery = (updates: Record<string, any>) => {
-    containerRef.current?.scrollIntoView({ block: 'start' })
+    scrollableRef.current?.scroll({ top: 0 })
     doQuery({ ...querys, ...updates, pageNo: 1 })
   }
 
   return {
+    scrollableRef,
     containerRef,
     updateDoQuery,
   }

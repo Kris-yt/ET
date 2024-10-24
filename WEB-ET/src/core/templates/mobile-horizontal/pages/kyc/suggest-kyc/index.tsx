@@ -18,9 +18,6 @@ export default () => {
   const inputDate = dayjs(userInfo?.registertime)
   const newDate = inputDate.add(3, 'day')
   const formattedDate = newDate.format('YYYY-MM-DD HH:mm:ss')
-  // setResultDate(newDate);
-  console.log('7777', formattedDate)
-  console.log('8888', userInfo?.registertime)
   useEventEmitter('openSuggest', () => {
     setDisplayModal(true)
   })

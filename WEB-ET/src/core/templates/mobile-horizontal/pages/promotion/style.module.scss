@@ -99,9 +99,17 @@
       height: 100%;
       overflow-y: auto;
       border-radius: 6px;
+      position: relative;
       img {
         border-radius: 6px;
         width: 100%;
+      }
+      .btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        transform: translateY(calc(-100% + -20px));
       }
     }
   }

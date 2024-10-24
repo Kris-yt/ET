@@ -22,7 +22,7 @@
   > input {
     display: flex;
     flex: 1;
-    background: none;
+    background: linear-gradient(180deg, #a7672d 0%, #be7a3c 100%);
     border: none;
     color: #ffe7b9;
     font-size: 14px;
@@ -40,23 +40,20 @@
     //   color: #ce9d7d;
     // }
     &:-webkit-autofill {
-      background: linear-gradient(180deg, #a7672d 0%, #be7a3c 100%) !important;
-      box-shadow:
-        0px 2px 1px 0px #fff3c8,
-        0px 2px 2px 0px #94571f inset;
       -webkit-text-fill-color: #ffe7b9 !important;
+      transition: background-color 5000s ease-in-out 0s !important ;
     }
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus,
     &:-webkit-autofill:active {
-      background-color: linear-gradient(
-        180deg,
-        #a7672d 0%,
-        #be7a3c 100%
-      ) !important;
-      box-shadow:
-        0px 2px 1px 0px #fff3c8,
-        0px 2px 2px 0px #94571f inset !important;
+      // background-color: linear-gradient(
+      //   180deg,
+      //   #a7672d 0%,
+      //   #be7a3c 100%
+      // ) !important;
+      // box-shadow:
+      //   0px 2px 1px 0px #fff3c8,
+      //   0px 2px 2px 0px #94571f inset !important;
       -webkit-text-fill-color: #ffe7b9 !important;
     }
   }

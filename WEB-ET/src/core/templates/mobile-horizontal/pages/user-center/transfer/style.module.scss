@@ -170,6 +170,7 @@
 .rec-status-wrap {
   :global {
     ._st {
+      &_def,
       &_dep-d_0,
       &_wdl-d_3, &_wdl-d_4, &_wdl-d_5, &_wdl-d_6 {
         color: var(--rec-primary-gold-color);
